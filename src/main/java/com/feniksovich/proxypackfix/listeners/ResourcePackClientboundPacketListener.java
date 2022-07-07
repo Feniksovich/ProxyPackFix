@@ -20,15 +20,20 @@ public class ResourcePackClientboundPacketListener extends AbstractPacketListene
 
     @Override
     public void packetReceive(PacketReceiveEvent<ResourcePackClientboundPacket> e) {
-        plugin.getLogger().warning("PacketReceive: " + e.packet().toString());
+        plugin.debugLog("PacketReceived: " + e.packet().toString());
         if (plugin.getCacheManager().isSame(e.player().uniqueId(), e.packet().getHash())) {
-            plugin.getLogger().warning("Hash the same, skipping installation of resourcepack and sending serverbound success event packet.");
+            plugin.debugLog("Cached record found for " + e.player().uniqueId() + " (hash " + e.packet().getHash() + ")");
+            plugin.debugLog("Hash the same, skipping installation of resource pack.");
 
             e.cancelled(true);
 
-            ResourcePackServerboundPacket packet = new ResourcePackServerboundPacket();
-            packet.setResult(0);
-            Protocolize.playerProvider().player(e.player().uniqueId()).sendPacketToServer(packet);
+            if (plugin.getConfigManager().isFakePacketSendingEnabled()) {
+                ResourcePackServerboundPacket packet = new ResourcePackServerboundPacket();
+                packet.setResult(0);
+                plugin.debugLog("Sending serverbound success event fake packet.");
+                Protocolize.playerProvider().player(e.player().uniqueId()).sendPacketToServer(packet);
+            }
+
             return;
         }
         plugin.getCacheManager().add(e.player().uniqueId(), e.packet().getHash());
@@ -36,7 +41,7 @@ public class ResourcePackClientboundPacketListener extends AbstractPacketListene
 
     @Override
     public void packetSend(PacketSendEvent<ResourcePackClientboundPacket> e) {
-        plugin.getLogger().warning("PacketSend: " + e.packet().toString());
+        plugin.debugLog("PacketSent: " + e.packet().toString());
     }
 }
 

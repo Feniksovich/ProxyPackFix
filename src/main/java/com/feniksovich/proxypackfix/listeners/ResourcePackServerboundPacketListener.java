@@ -18,11 +18,11 @@ public class ResourcePackServerboundPacketListener extends AbstractPacketListene
 
     @Override
     public void packetReceive(PacketReceiveEvent<ResourcePackServerboundPacket> e) {
-        plugin.getLogger().warning("PacketReceive: " + e.packet().toString());
+        plugin.debugLog("PacketReceived: " + e.packet().toString());
     }
 
     @Override
     public void packetSend(PacketSendEvent<ResourcePackServerboundPacket> e) {
-        plugin.getLogger().warning("PacketSend: " + e.packet().toString());
+        plugin.debugLog("PacketSent: " + e.packet().toString());
     }
 }
