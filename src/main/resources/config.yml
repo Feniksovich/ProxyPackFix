@@ -1,0 +1,8 @@
+# Включает расширенное логгирование для используемых пакетов
+debug-mode: false
+# Отправлять ли фейк-пакет, передающий статус установки ресурспака.
+# Всегда передает значение 0 (SUCCESSFULLY_LOADED), если игрок уже устанавливал ресурспак.
+# https://wiki.vg/Protocol#Resource_Pack_.28serverbound.29
+# В большинстве случаев необходимо для вызова PlayerResourcePackStatusEvent на бекенд-сервере.
+# https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/player/PlayerResourcePackStatusEvent.html
+send-fake-resourcepack-status-packet: true
