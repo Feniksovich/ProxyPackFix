@@ -1,0 +1,5 @@
+name: ProxyPackFix
+main: com.feniksovich.proxypackfix.ProxyPackFix
+author: Feniksovich
+version: "1.0"
+depends: ["Protocolize"]
