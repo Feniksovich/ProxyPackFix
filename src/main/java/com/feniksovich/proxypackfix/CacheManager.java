@@ -14,8 +14,8 @@ public class CacheManager {
     }
 
     public void add(final UUID uuid, final String hash) {
-        plugin.getLogger().warning("Added cache record for " + uuid + " with hash " + hash);
         cache.put(uuid, hash);
+        plugin.debugLog("Added cache record for " + uuid + " with hash " + hash);
     }
 
     public boolean isSame(final UUID uuid, final String hash) {
@@ -23,7 +23,12 @@ public class CacheManager {
     }
 
     public void remove(final UUID uuid) {
-        plugin.getLogger().warning("Removed cache record for " + uuid);
         cache.remove(uuid);
+        plugin.debugLog("Removed cache record for " + uuid + " (user disconnected)");
+    }
+
+    public void clear() {
+        cache.clear();
+        plugin.debugLog("Cleared cached player list.");
     }
 }
