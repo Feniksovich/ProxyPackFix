@@ -1,6 +1,8 @@
 package com.feniksovich.proxypackfix;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class CacheManager {
 
@@ -15,7 +17,7 @@ public class CacheManager {
         if (cache.containsKey(uuid)) {
             cache.get(uuid).add(hash);
         } else {
-            cache.put(uuid, Set.of(hash));
+            cache.put(uuid, Stream.of(hash).collect(Collectors.toSet()));
         }
         plugin.debugLog("Added cache record for " + uuid + " with hash " + hash);
     }
