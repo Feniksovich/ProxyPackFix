@@ -9,7 +9,8 @@ Tiny BungeeCord &amp; Velocity plugin that prevents resending of resource pack i
 ## TODO
 - [x] Wide proxy support
   - [x] BungeeCord
-  - [ ] Velocity
+  - [x] Waterfall
+  - [ ] Velocity (WIP)
 
 - [x] Extra features  
   - [x] Reload and cache clearing support
