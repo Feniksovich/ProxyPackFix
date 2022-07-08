@@ -14,5 +14,5 @@ Tiny BungeeCord &amp; Velocity plugin that prevents resending of resource pack i
 
 - [x] Extra features  
   - [x] Reload and cache clearing support
-  - [ ] Several packs per player support
+  - [x] Several packs per player support
   - [ ] Providing plugin API
