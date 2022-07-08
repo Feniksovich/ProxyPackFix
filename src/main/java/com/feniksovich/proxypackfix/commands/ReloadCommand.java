@@ -20,21 +20,21 @@ public class ReloadCommand extends Command {
         if (args.length == 0) return;
 
         if (!hasPermission(sender)) {
-           sender.sendMessage(TextComponent.fromLegacyText("You don't have permissions to do that.", ChatColor.DARK_RED));
+           sender.sendMessage(TextComponent.fromLegacyText("§4You don't have permissions to do that."));
            return;
         }
 
         switch (args[0].toLowerCase()) {
             case "reload":
                 plugin.getConfigManager().loadConfiguration();
-                sender.sendMessage(TextComponent.fromLegacyText("Configuration successfully reloaded.", ChatColor.GREEN));
+                sender.sendMessage(TextComponent.fromLegacyText("§aConfiguration successfully reloaded.", ChatColor.GREEN));
                 break;
             case "clearcache":
                 plugin.getCacheManager().clear();
-                sender.sendMessage(TextComponent.fromLegacyText("Cache successfully cleared.", ChatColor.GREEN));
+                sender.sendMessage(TextComponent.fromLegacyText("§aCache successfully cleared.", ChatColor.GREEN));
                 break;
             default:
-                sender.sendMessage(TextComponent.fromLegacyText("Unknown argument."));
+                sender.sendMessage(TextComponent.fromLegacyText("§7Unknown argument."));
         }
     }
 }
