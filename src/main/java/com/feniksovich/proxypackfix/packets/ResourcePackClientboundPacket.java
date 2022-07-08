@@ -94,7 +94,7 @@ public class ResourcePackClientboundPacket extends AbstractPacket {
         return forced;
     }
 
-    public boolean isHasPromptMessage() {
+    public boolean hasPromptMessage() {
         return hasPromptMessage;
     }
 

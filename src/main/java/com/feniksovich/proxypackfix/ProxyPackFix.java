@@ -41,7 +41,7 @@ public class ProxyPackFix extends Plugin {
         super.onDisable();
     }
 
-    public void greetings() {
+    private void greetings() {
         getLogger().info("");
         getLogger().info("ProxyPackFix v" + this.getDescription().getVersion() + " | Platform: " + this.getProxy().getVersion());
         getLogger().info("Developer: Feniksovich | feniksovich.github.io");

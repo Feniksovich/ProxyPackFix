@@ -6,12 +6,22 @@
 
     <groupId>com.feniksovich</groupId>
     <artifactId>ProxyPackFix</artifactId>
-    <version>0.0.2-prerelease</version>
+    <version>0.0.3</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
 
     <repositories>
         <repository>
