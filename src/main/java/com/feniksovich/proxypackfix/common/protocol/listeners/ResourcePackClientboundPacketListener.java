@@ -1,8 +1,8 @@
-package com.feniksovich.proxypackfix.listeners;
+package com.feniksovich.proxypackfix.common.protocol.listeners;
 
 import com.feniksovich.proxypackfix.ProxyPackFix;
-import com.feniksovich.proxypackfix.packets.ResourcePackClientboundPacket;
-import com.feniksovich.proxypackfix.packets.ResourcePackServerboundPacket;
+import com.feniksovich.proxypackfix.common.protocol.packets.ResourcePackClientboundPacket;
+import com.feniksovich.proxypackfix.common.protocol.packets.ResourcePackServerboundPacket;
 import dev.simplix.protocolize.api.Direction;
 import dev.simplix.protocolize.api.Protocolize;
 import dev.simplix.protocolize.api.listener.AbstractPacketListener;

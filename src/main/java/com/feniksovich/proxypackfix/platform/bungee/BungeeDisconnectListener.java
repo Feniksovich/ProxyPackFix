@@ -1,15 +1,14 @@
-package com.feniksovich.proxypackfix.listeners;
+package com.feniksovich.proxypackfix.platform.bungee;
 
-import com.feniksovich.proxypackfix.ProxyPackFix;
 import net.md_5.bungee.api.event.PlayerDisconnectEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
 
-public class PlayerDisconnectListener implements Listener {
+public class BungeeDisconnectListener implements Listener {
 
-    private final ProxyPackFix plugin;
+    private final BungeeProxyPackFix plugin;
 
-    public PlayerDisconnectListener(ProxyPackFix plugin) {
+    public BungeeDisconnectListener(BungeeProxyPackFix plugin) {
         this.plugin = plugin;
     }
 

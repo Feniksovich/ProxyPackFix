@@ -1,4 +1,4 @@
-package com.feniksovich.proxypackfix.packets;
+package com.feniksovich.proxypackfix.common.protocol.packets;
 
 import dev.simplix.protocolize.api.PacketDirection;
 import dev.simplix.protocolize.api.mapping.AbstractProtocolMapping;

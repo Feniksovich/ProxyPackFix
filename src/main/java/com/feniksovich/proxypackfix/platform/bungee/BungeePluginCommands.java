@@ -1,16 +1,15 @@
-package com.feniksovich.proxypackfix.commands;
+package com.feniksovich.proxypackfix.platform.bungee;
 
-import com.feniksovich.proxypackfix.ProxyPackFix;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.plugin.Command;
 
-public class ReloadCommand extends Command {
+public class BungeePluginCommands extends Command {
 
-    private final ProxyPackFix plugin;
+    private final BungeeProxyPackFix plugin;
 
-    public ReloadCommand(ProxyPackFix plugin) {
+    public BungeePluginCommands(BungeeProxyPackFix plugin) {
         super("proxypackfix", "proxypackfix.commands", "ppf");
         this.plugin = plugin;
     }
