@@ -1,5 +1,5 @@
 # ProxyPackFix
-Tiny BungeeCord &amp; Velocity plugin that prevents resending of resource pack installation on servers switch and make your players happy (WIP). Powered on [Protocolize](https://github.com/Exceptionflug/protocolize).
+Tiny BungeeCord plugin that prevents resending of resource pack installation on servers switch and make your players happy. Powered on [Protocolize](https://github.com/Exceptionflug/protocolize).
 
 | MC Version | Tested | Supported | Notes                                                           |
 | ---------- | ------ | --------- | --------------------------------------------------------------- |
@@ -10,9 +10,9 @@ Tiny BungeeCord &amp; Velocity plugin that prevents resending of resource pack i
 - [x] Wide proxy support
   - [x] BungeeCord
   - [x] Waterfall
-  - [ ] Velocity (WIP)
+  - [x] ~Velocity~ (won't be implemented, see [this](https://github.com/PaperMC/Velocity/issues/791))
 
 - [x] Extra features  
   - [x] Reload and cache clearing support
-  - [x] Several packs per player support
+  - [x] ~Several packs per player support~ (won't be implemented since Minecraft client doesn't allow to install several server packs)
   - [ ] Providing plugin API
